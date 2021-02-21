@@ -40,4 +40,8 @@ build.gradle
 ./gradle/**
 gradlew
 gradlew.bat
-settings.gradle
+settings.gradlegradlew.bat
+gradlew
+gradlew
+gradlew.bat
+HELP.md
