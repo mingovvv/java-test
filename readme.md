@@ -43,3 +43,15 @@ JUnit5 기준으로 작성
 - 예외 발생 확인 : assertThrows(expectedType, excutable)
 - 특정시간 안에 실행이 완료 되는지 : assertTimeout(duration, excutable)
 
+### 조건에 따른 테스트
+- `org.junit.jupiter.api` 패키지의 `Assumptions` 를 사용
+- assumeTrue, assumingThat ...
+- `@EnabledOnOs`, `@DisabledOnJre` ...
+
+### 반복 테스트
+- `org.junit.jupiter.api.RepeatedTest` 패키지
+- `RepetitionInfo` 를 매개변수로 받아서 사용할 수 있음
+- `@RepeatedTest`, `@ParameterizedTest` 사용
+- @ParameterizedTest
+  - `@ValueSource`, `@EmptySource`, `@NullSource  `
+### 

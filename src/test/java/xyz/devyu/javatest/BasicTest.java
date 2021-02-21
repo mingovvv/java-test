@@ -7,7 +7,7 @@ import org.junit.jupiter.api.function.Executable;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class TestTest {
+class BasicTest {
 
     @Test
     @DisplayName("자바 테스트 메소드 1")
