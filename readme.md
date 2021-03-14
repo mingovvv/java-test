@@ -53,5 +53,13 @@ JUnit5 기준으로 작성
 - `RepetitionInfo` 를 매개변수로 받아서 사용할 수 있음
 - `@RepeatedTest`, `@ParameterizedTest` 사용
 - @ParameterizedTest
-  - `@ValueSource`, `@EmptySource`, `@NullSource  `
-### 
+  - `@ValueSource`, `@EmptySource`, `@NullSource`
+  
+### 테스트 인스턴스
+- 메서드 마다 인스턴스를 생성하는 것이 default 전략(의존성을 낮추는 방법)
+- `@TestInstance(Lifecycle.PER_CLASS)` 를 통해 클래스 당 하나의 인스턴스를 생성하고 공유할 수도 있음
+
+### 테스트 순서
+- 테스트 메서드의 실행순서는 기본적으로 보장되지 않는다.(각각의 모듈은 단위테스트의 개념으로 독립적인 상태로 완전해야 하기 때문)
+- 하지만 `@TestMethodOrder(MethodOrderer.OrderAnnotation.class)` 과 `@Order` 를 통해 인위적인 순서를 줄 수 있다.
+ 
