@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 @DisplayName("테스트 인스턴스 TEST")
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@TestInstance(TestInstance.Lifecycle.PER_METHOD)
 public class InstanceTest {
 
     // junit5는 각 메서드의 의존성을 낮추기 위해 Test Method마다 각각 인스턴스를 생성하는 전략이 default 전략

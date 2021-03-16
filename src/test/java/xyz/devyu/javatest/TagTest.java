@@ -3,6 +3,8 @@ package xyz.devyu.javatest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import xyz.devyu.javatest.annotations.FastTest;
+import xyz.devyu.javatest.annotations.SlowTest;
 
 public class TagTest {
 

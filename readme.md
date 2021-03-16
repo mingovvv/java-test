@@ -63,3 +63,18 @@ JUnit5 기준으로 작성
 - 테스트 메서드의 실행순서는 기본적으로 보장되지 않는다.(각각의 모듈은 단위테스트의 개념으로 독립적인 상태로 완전해야 하기 때문)
 - 하지만 `@TestMethodOrder(MethodOrderer.OrderAnnotation.class)` 과 `@Order` 를 통해 인위적인 순서를 줄 수 있다.
  
+### test properties를 통한 전역설정
+- test/resources 경로에 `junit-platform.properties` 파일을 생성
+```properties
+# 테스트 인스턴스 라이프사이클 설정
+junit.jupiter.testinstance.lifecycle.default = per_class
+
+# 확장팩 자동 감지 기능
+junit.jupiter.extensions.autodetection.enabled = true
+
+# @Disabled 무시하고 실행하기
+junit.jupiter.conditions.deactivate = org.junit.*DisabledCondition
+
+# 테스트 이름 표기 전략 설정
+junit.jupiter.displayname.generator.default = org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores
+```
